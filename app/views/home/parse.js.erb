@@ -1,4 +1,4 @@
 
 $('#words').empty();
 
-$('#words').append("<%= j render :partial => 'parse', {:locals => :subways => @subways} %> );
+$('#words').append("<%=j @view.to_sentance %> );

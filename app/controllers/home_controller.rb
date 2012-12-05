@@ -1,21 +1,28 @@
 class HomeController < ApplicationController
 
-
-	
-
-	def new
-    x = HTTParty.get('constitution.org/usdeclar.txt')
-    y = x.split(' ')
-    z = y.length
+  def new
+    x = HTTParty.get('http://www.constitution.org/usdeclar.txt')
+    y = x.split
+    # z = y.length
 	  
     t = Tree.new
 
-    z.times do
-      t.insert(y.pop)
+    y.each do |word|
+      t.insert(word)
     end
 
-    
+
+    @view = t.parsed
+
   end
+
+  def parse
+  end
+
+  def index
+  end
+
+end
 
 
 

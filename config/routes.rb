@@ -2,9 +2,11 @@ Treedom::Application.routes.draw do
   
   root :to => 'home#index'
 
-  match '/home' => 'home#new' :via => get
+  match 'home' => 'home#new', :via => :get
  
-  match '/home/parse' => 'home#parse' :via => post
+  match 'home/parse' => 'home#parse', :via => :post
+
+
 
 
   # The priority is based upon order of creation:
