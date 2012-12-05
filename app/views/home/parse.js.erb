@@ -1,0 +1,4 @@
+
+$('#words').empty();
+
+$('#words').append("<%= j render :partial => 'parse', {:locals => :subways => @subways} %> );
