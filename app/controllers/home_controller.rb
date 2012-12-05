@@ -1,7 +1,8 @@
 class HomeController < ApplicationController
 
   def new
-    x = HTTParty.get('http://www.constitution.org/usdeclar.txt')
+    url = 'parse'
+    x = HTTParty.get(url)
     y = x.split
     # z = y.length
 	  
