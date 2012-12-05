@@ -1,0 +1,8 @@
+<h1> Hello! </h1>
+<%= form_tag '/parse', :remote => true do %>
+  <%= text_field_tag 'parse' %> 
+  <%= submit_tag %>
+  <% end %>
+
+<div id = 'words'>
+  </div>

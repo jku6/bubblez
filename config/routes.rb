@@ -1,10 +1,11 @@
 Treedom::Application.routes.draw do
   
-  root :to => 'home#index'
-
-  match 'home' => 'home#new', :via => :get
+  match 'home' => 'home#home', :via => :get
  
-  match 'home/parse' => 'home#parse', :via => :post
+  match '/parse' => 'home#parse', :via => :post
+
+
+  root :to => 'home#index'
 
 
 

@@ -1,24 +1,24 @@
 class HomeController < ApplicationController
 
-  def new
-    url = 'parse'
-    x = HTTParty.get(url)
-    y = x.split
-    # z = y.length
-	  
-    t = Tree.new
-
-    y.each do |word|
-      t.insert(word)
-    end
-
-
-    @view = t.parsed
-
+  def home
   end
 
   def parse
+
+    url = params[:parse]
+    binding.pry
+    get = HTTParty.get(url)
+    words_array = get.split
+    words_array = words_array.uniq
+    z = words_array.length
+
+    
+
+   
+
   end
+
+  
 
   def index
   end
